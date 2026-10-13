@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#05060c">
+  <title>HYPERLINE — Anti-Gravity Racing</title>
+  <script type="module" crossorigin src="./assets/index-BR0xEB_O.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Tqp4tFmu.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div class="panel top-left">
+      <div class="label">POSITION</div>
+      <div class="big"><span id="pos">8</span><span class="dim">/<span id="pos-total">8</span></span></div>
+    </div>
+    <div class="panel top-right">
+      <div class="label">LAP <span id="lap" class="value">1/3</span></div>
+      <div class="time" id="time">0:00.00</div>
+      <div class="label small">BEST <span id="best" class="value">--:--.--</span></div>
+      <div class="label small">LAST <span id="last" class="value">--:--.--</span></div>
+    </div>
+    <div class="panel bottom-left">
+      <canvas id="minimap" width="220" height="220"></canvas>
+      <div class="label">SHIELD ENERGY</div>
+      <div class="bar"><div id="energy" class="fill"></div></div>
+      <div class="label small"><span id="turbo-hint">SPACE — TURBO</span></div>
+    </div>
+    <div class="panel bottom-right">
+      <div class="speed"><span id="speed">000</span><span class="unit">KM/H</span></div>
+      <div class="bar thrust"><div id="thrust" class="fill"></div></div>
+      <div id="boost-flag" class="flag">BOOST</div>
+    </div>
+    <div id="message"></div>
+  </div>
+
+  <div id="title" class="overlay">
+    <div class="logo">HYPER<span>LINE</span></div>
+    <div class="tagline">ANTI-GRAVITY RACING LEAGUE &nbsp;//&nbsp; NEO-KYRA CIRCUIT</div>
+    <div class="controls">
+      <div><kbd>W</kbd><kbd>↑</kbd> thrust</div>
+      <div><kbd>A</kbd><kbd>D</kbd> <kbd>←</kbd><kbd>→</kbd> steer</div>
+      <div><kbd>Q</kbd><kbd>E</kbd> airbrakes</div>
+      <div><kbd>SPACE</kbd> turbo</div>
+      <div><kbd>S</kbd><kbd>↓</kbd> brake</div>
+      <div><kbd>V</kbd> camera</div>
+      <div><kbd>R</kbd> restart &nbsp; <kbd>P</kbd> pause</div>
+      <div><kbd>M</kbd> mute</div>
+    </div>
+    <div class="touch-hints">
+      <div>LEFT THUMB — DRAG TO STEER</div>
+      <div>PUSH FAR — AIRBRAKE DRIFT</div>
+      <div>THRUST IS AUTOMATIC</div>
+    </div>
+    <div class="press" id="press"><span class="key-only">PRESS ENTER</span><span class="touch-only">TAP</span> TO RACE</div>
+  </div>
+
+  <div id="results" class="overlay hidden">
+    <div class="results-title" id="results-title">RACE COMPLETE</div>
+    <table id="results-table"></table>
+    <div class="press"><span class="key-only">PRESS ENTER</span><span class="touch-only">TAP</span> TO RACE AGAIN</div>
+  </div>
+
+  <div id="touch">
+    <div class="steer-zone"></div>
+    <div class="steer-ring"><div class="steer-knob"></div></div>
+    <div class="btn btn-brake">BRAKE</div>
+    <div class="btn btn-turbo">TURBO</div>
+    <div class="btn btn-small btn-pause" data-key="KeyP">II</div>
+    <div class="btn btn-small btn-cam" data-key="KeyV">CAM</div>
+    <div class="btn btn-small btn-restart" data-key="KeyR">↻</div>
+  </div>
+  <div id="rotate" class="overlay"><div class="press">ROTATE YOUR DEVICE</div></div>
+
+  <div id="paused" class="overlay hidden"><div class="results-title">PAUSED</div></div>
+  <div id="loading" class="overlay"><div class="press">LOADING…</div></div>
+
+</body>
+</html>
