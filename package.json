@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "mobile": "vite build && vite preview --host --port 5184",
+    "deploy": "tools/deploy.sh",
     "assets": "/Applications/Blender.app/Contents/MacOS/Blender --background --python tools/build_assets.py -- public/models",
     "sim": "node tools/sim.mjs"
   },

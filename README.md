@@ -9,6 +9,8 @@ npm run dev        # http://localhost:5173
 
 To play on a phone on the same Wi-Fi: `npm run mobile`, then open the printed Network URL. Touch controls appear automatically: thrust is automatic, drag the left thumb to steer (push far for an airbrake drift), turbo and brake under the right thumb.
 
+Live at https://codecoded.github.io/hyperline/ — `npm run deploy` rebuilds and republishes it.
+
 ## Controls
 
 | | |
